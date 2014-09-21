@@ -1,0 +1,14 @@
+---
+  :n: 3
+  :m: 3
+  :water_probability:  50
+  :ground_probability: 50
+  :plant_probability: 20
+  :predator_probability: 20 
+  :vegetarian_probability: 20
+  :predator_move_probability:   50
+  :predator_hunger_limit:       10
+  :predator_starvation_level:    8
+  :vegetarian_move_probability: 50
+  :vegetarian_hunger_limit:     10
+  :vegetarian_starvation_level:  7

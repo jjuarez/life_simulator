@@ -1,0 +1,1 @@
+require 'life_simulator/world'
