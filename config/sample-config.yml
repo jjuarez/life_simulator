@@ -1,6 +1,6 @@
 ---
-  :n: 3
-  :m: 3
+  :n: 5
+  :m: 5
   :water_probability:  50
   :ground_probability: 50
   :plant_probability: 20

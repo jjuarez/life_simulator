@@ -11,6 +11,7 @@ require 'life_simulator/tile_factory'
 require 'life_simulator/vegetarian_behaviour'
 require 'life_simulator/predator_behaviour'
 require 'life_simulator/ground_behaviour'
+require 'life_simulator/view_helper'
 
 
 module LifeSimulator
@@ -37,22 +38,20 @@ module LifeSimulator
       self
     end
 
+
     ##
-    # Show the status of the world
-    def show()
+    # Utility method to recover tiles without location
+    def tile(x, y)
 
-      @m.times do |y|
-        @n.times do |x|
+      @tiles[x][y]
+    end
 
-          if @tiles[x][y].is_a?(Water)
 
-            puts @tiles[x][y]
-          else
+    ##
+    # Utiliti method for show the status of the world
+    def show(banner)
 
-           puts @tiles[x][y].livingbeing ? @tiles[x][y].livingbeing : @tiles[x][y]
-          end
-        end
-      end
+      ViewHelper.show(self, banner)
     end
 
 
@@ -87,6 +86,8 @@ module LifeSimulator
           end
         end
       end
+
+      self
     end
 
 
@@ -133,6 +134,8 @@ module LifeSimulator
           turn!(x, y)
         end
       end
+
+      self
     end
 
 
@@ -150,6 +153,8 @@ module LifeSimulator
       end
 
       threads.each(&:join)
+
+      self
     end
 
 
