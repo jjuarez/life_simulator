@@ -19,7 +19,6 @@ module LifeSimulator
         :predator   =>Configurator[:predator_probability]
       }
 
-      puts probabilities.inspect
       super(probabilities)
       
       self
