@@ -30,13 +30,15 @@ module LifeSimulator
 
     ##
     # Test is its in starvation 
-    def its_in_starvation?()
+    def starvation?()
+
       @hunger_counter >= @starvation_level
     end
 
     ##
     # Method for testing if the animal is going to die. Test this condition in first place.
-    def its_alive?()
+    def alive?()
+
       @hunger_counter < @hunger_limit
     end
 

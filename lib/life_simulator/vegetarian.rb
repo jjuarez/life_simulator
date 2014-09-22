@@ -23,6 +23,5 @@ module LifeSimulator
     def to_s()
       inspect()
     end
-
   end
 end
