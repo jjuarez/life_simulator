@@ -5,11 +5,6 @@ require 'life_simulator'
 
 w = LifeSimulator::World.new(Choice.choices[:config])
 
-w.populate!()
-w.show()
-
-w.performs_sequential!()
-w.show()
-
-w.performs_parallel!()
-w.show()
+w.populate!.show()
+w.performs_sequential!.show()
+w.performs_parallel!.show()
