@@ -50,7 +50,7 @@ module LifeSimulator
       inspect()
     end
 
-    attr_reader :hunger_limit, :starvation_level
+    attr_reader   :hunger_limit, :starvation_level
     attr_accessor :hunger_counter
   end
 end
