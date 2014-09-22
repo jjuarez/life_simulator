@@ -1,6 +1,9 @@
 module LifeSimulator
 
   class LivingBeing
-    # Only a convention...
+
+    def initialize()
+      #...
+    end
   end
 end
