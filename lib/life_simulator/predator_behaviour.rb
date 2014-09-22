@@ -19,7 +19,7 @@ module LifeSimulator
       predator_tile     = new_tiles[predator_location.x][predator_location.y]
       predator          = predator_tile.livingbeing
 
-      if predator.its_in_starvation?()
+      if predator.starvation?()
 
         # Starvation status
         vegetarians = TileFinder.find_vegetarians(new_tiles, predator_location)
@@ -29,7 +29,7 @@ module LifeSimulator
           # No food it has not eaten
           predator.hunger_counter+=1
 
-          new_tiles[predator_location.x][predator_location.y].livingbeing = nil
+          new_tiles[predator_location.x][predator_location.y].livingbeing = nil unless predator.alive?()
         else
           
           # get the new vegetarian tile

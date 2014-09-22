@@ -19,7 +19,7 @@ module LifeSimulator
       vegetarian_tile     = new_tiles[vegetarian_location.x][vegetarian_location.y]
       vegetarian          = vegetarian_tile.livingbeing
 
-      if vegetarian.its_in_starvation?()
+      if vegetarian.starvation?()
 
         # Starvation status
         plants = TileFinder.find_plants(new_tiles, vegetarian_location)
@@ -29,7 +29,7 @@ module LifeSimulator
           # No food it has not eaten
           vegetarian.hunger_counter+=1
 
-          new_tiles[vegetarian_location.x][vegetarian_location.y].livingbeing = nil unless vegetarian.tis_alive?()
+          new_tiles[vegetarian_location.x][vegetarian_location.y].livingbeing = nil unless vegetarian.alive?()
         else
           
           # get the new plant tile

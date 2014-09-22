@@ -50,7 +50,7 @@ module LifeSimulator
         npt = TileFinder.find_adjacent_plants(new_tiles, ground_location).length
         tp  = assign_percentage_water(nwt) + assign_percentage_plants(npt)
 
-        new_tiles[ground_location.x][ground_location.y].livingbeing = Plant.new() if tp >=100
+        new_tiles[ground_location.x][ground_location.y].livingbeing = Plant.new() if tp >= 100
       end
 
       return new_tiles
